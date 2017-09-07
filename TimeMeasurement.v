@@ -19,16 +19,23 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module TimeMeasurement(clk,en,res);
-	 input  clk, en;
-	 output [5:0] res;
+	input  clk, en;
+	output [5:0] res;
 	 
-	 reg [3:0] res, count,ncount;
+	reg [5:0] res, count;
 	 
-	 always @(posedge clk)
-      if(en == 0) res = count;
-      else count = ncount;
-		
-	always @(count)
-      ncount = count + 1;
+	initial begin
+		res = 0;
+		count = 0;
+	end
+	 
+	always @(posedge clk) begin
+		if(en == 1) count = count+1;
+	end
+	
+	always @(en) begin
+		if(en == 0) res = count;
+		else res = 0;
+	end
 
 endmodule

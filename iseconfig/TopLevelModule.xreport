@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-09-07T12:20:19</DateModified>
+  <DateModified>2017-09-07T20:22:08</DateModified>
   <ModuleName>TopLevelModule</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/dennis/Documentos/Laboratorio2/iseconfig/Parameters.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/dennis/Documentos/Laboratorio2/</ImplementationReportsDirectory>
-  <DateInitialized>2017-09-07T12:20:19</DateInitialized>
+  <SavedFilePath>/home/dennis/Documentos/Laboratorio2/iseconfig/TopLevelModule.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/dennis/Documentos/Laboratorio2</ImplementationReportsDirectory>
+  <DateInitialized>2017-09-07T20:22:07</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

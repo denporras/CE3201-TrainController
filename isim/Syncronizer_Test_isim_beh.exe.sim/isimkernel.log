@@ -1,0 +1,29 @@
+Command line:
+   Syncronizer_Test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  43901
+
+Thu Sep  7 13:00:20 2017
+
+
+ Elaboration Time: 0.04 sec
+
+ Current Memory Usage: 243.454 Meg
+
+ Total Signals          : 22
+ Total Nets             : 26
+ Total Signal Drivers   : 14
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 17
+ Total Traceable Variables  : 31
+ Total Scalar Nets and Variables : 123
+Total Line Count : 48
+
+ Total Simulation Time: 0.29 sec
+
+ Current Memory Usage: 318.956 Meg
+
+Thu Sep  7 13:01:36 2017
+

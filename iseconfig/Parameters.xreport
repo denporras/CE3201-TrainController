@@ -1,11 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
+<<<<<<< HEAD
   <DateModified>2017-09-07T10:28:14</DateModified>
   <ModuleName>Parameters</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/daedgomez/Desarrollo/TrainController/iseconfig/Parameters.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/daedgomez/Desarrollo/TrainController/</ImplementationReportsDirectory>
+=======
+  <DateModified>2017-09-06T19:24:29</DateModified>
+  <ModuleName>Parameters</ModuleName>
+  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SavedFilePath>/home/kevin/programacion/verilog/taller1/CE3201-TrainController/iseconfig/Parameters.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/kevin/programacion/verilog/taller1/CE3201-TrainController/</ImplementationReportsDirectory>
+>>>>>>> a5554119251121d877665eea08f22031ff349dab
   <DateInitialized>2017-09-06T14:51:08</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

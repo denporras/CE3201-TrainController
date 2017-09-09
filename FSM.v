@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-module counter(next_state,ld,en,clk,present_state);
+module Counter(next_state,ld,en,clk,present_state);
 
 	input  [3:0] next_state;
 	input ld, en, clk;
@@ -43,7 +43,7 @@ module counter(next_state,ld,en,clk,present_state);
 			
 endmodule
 
-module counter_comb(next_state,ld,en,a,b,c,d,y);
+module Counter_comb(next_state,ld,en,a,b,c,d,y);
 	input  a,b,c,d;
 	output [3:0] next_state, ld, en;
 	
@@ -112,13 +112,15 @@ module counter_comb(next_state,ld,en,a,b,c,d,y);
 	or orld(ld,outld1,outld2,a);
 	
 	//EN
-	wire outen1, outen2,outen3;
+	wire outen1,outen2,outen3;
 
 	and anden1(outen1,na,nb,ny);
 	and anden2(outen2,na,nd,ny);
 	and anden3(outen3,na,b,nc,d);
 	
 	or ora(en,outen1,outen2,outen3);
+	
+	assign next_state = {ai,bi,ci,di};
 	
 	
 endmodule

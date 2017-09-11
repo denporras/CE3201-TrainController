@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/dennis/Documentos/Laboratorio2/Syncronizer_Test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/dennis/Documentos/Laboratorio2/Syncronizer_Test_isim_beh.wdb 
+Running: /home/dennis/Documentos/Laboratorio2/TopLeveModule_Test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/dennis/Documentos/Laboratorio2/TopLeveModule_Test_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,5 +11,4 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 1.00ns
 # exit 0

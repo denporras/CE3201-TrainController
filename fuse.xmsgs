@@ -5,8 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"/home/dennis/Documentos/Laboratorio2/Syncronizer.v" Line 36: Redeclaration of ansi port <arg fmt="%s" index="1">Y</arg> is not allowed
-</msg>
-
 </messages>
 

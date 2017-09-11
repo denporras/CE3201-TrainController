@@ -1,23 +1,22 @@
-Running: /home/dennis/Xilings/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/dennis/Documentos/Laboratorio2/Syncronizer_Test_isim_beh.exe -prj /home/dennis/Documentos/Laboratorio2/Syncronizer_Test_beh.prj work.Syncronizer_Test work.glbl 
+Running: /home/dennis/Xilings/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/dennis/Documentos/Laboratorio2/TopLeveModule_Test_isim_beh.exe -prj /home/dennis/Documentos/Laboratorio2/TopLeveModule_Test_beh.prj work.TopLeveModule_Test work.glbl 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "/home/dennis/Documentos/Laboratorio2/Syncronizer.v" into library work
-WARNING:HDLCompiler:751 - "/home/dennis/Documentos/Laboratorio2/Syncronizer.v" Line 36: Redeclaration of ansi port Y is not allowed
-Analyzing Verilog file "/home/dennis/Documentos/Laboratorio2/Syncronizer_Test.v" into library work
+Analyzing Verilog file "/home/dennis/Documentos/Laboratorio2/TopLevelModule.v" into library work
+Analyzing Verilog file "/home/dennis/Documentos/Laboratorio2/TopLeveModule_Test.v" into library work
 Analyzing Verilog file "/home/dennis/Xilings/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 94688 KB
-Fuse CPU Usage: 2080 ms
-Compiling module Syncronizer
-Compiling module Syncronizer_Test
+Fuse Memory Usage: 94668 KB
+Fuse CPU Usage: 2000 ms
+Compiling module TopLevelModule
+Compiling module TopLeveModule_Test
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 2 sub-compilation(s) to finish...
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 3 Verilog Units
-Built simulation executable /home/dennis/Documentos/Laboratorio2/Syncronizer_Test_isim_beh.exe
-Fuse Memory Usage: 654912 KB
-Fuse CPU Usage: 2080 ms
-GCC CPU Usage: 440 ms
+Built simulation executable /home/dennis/Documentos/Laboratorio2/TopLeveModule_Test_isim_beh.exe
+Fuse Memory Usage: 654840 KB
+Fuse CPU Usage: 2010 ms
+GCC CPU Usage: 420 ms

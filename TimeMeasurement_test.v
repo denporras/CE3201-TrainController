@@ -29,7 +29,7 @@ module TimeMeasurement_test;
 	reg en;
 
 	// Outputs
-	wire [5:0] res;
+	wire [12:0] res;
 
 	// Instantiate the Unit Under Test (UUT)
 	TimeMeasurement uut (
@@ -58,4 +58,5 @@ module TimeMeasurement_test;
 	
       
 endmodule
+
 

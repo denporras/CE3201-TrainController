@@ -18,13 +18,21 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Parameters(
-    input A,
-    input B,
-    input C,
-    input D,
-    output T
-    );
+module Parameters(present_state,t,clk);
 
+	input [3:0] present_state;
+	input clk;
+	output [12:0] t; //Time in ms
+	
+	reg [12:0] t;
+	
+	always @(posedge clk) begin
+		case (present_state)
+			4'b0000: t=13'b0011111010000; //2000ms
+			4'b0011: t=13'b0001111101000; //1000ms
+			4'b0100: t=13'b0011111010000; //2000ms
+			default: t=13'b0000000000000;
+		endcase
+	end
 
 endmodule

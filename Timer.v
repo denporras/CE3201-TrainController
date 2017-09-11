@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    17:07:36 09/06/2017 
+// Create Date:    20:45:56 09/08/2017 
 // Design Name: 
-// Module Name:    TimeMeasurement 
+// Module Name:    Timer 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,24 +18,18 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module TimeMeasurement(clk,en,res);
-	input  clk, en;
-	output [12:0] res; //Time in ms
-	 
-	reg [12:0] res, count; //Time in ms
-	 
-	initial begin
-		res = 0;
-		count = 0;
-	end
-	 
+module Timer(t,clk,timer);
+
+	input [12:0] t;
+	input clk;
+	output timer;
+	
 	always @(posedge clk) begin
-		if(en == 1) count = count+1;
+		if(t>0) begin
+			timer = 0;
+			t = t-1;
+		end
+		else timer = 1;
 	end
 	
-	always @(en) begin
-		if(en == 0) res = count;
-		else res = 0;
-	end
-
 endmodule

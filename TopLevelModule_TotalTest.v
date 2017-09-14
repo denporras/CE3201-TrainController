@@ -63,11 +63,22 @@ module TopLevelModule_TotalTest;
 		// Wait 100 ns for global reset to finish
 		#100;
 		S1 = 1;
-		#100
+		#200
 		S2 = 1;
 		#100
 		S1 = 0;
 		S2 = 0;
+		#100
+		S3 = 1;
+		#100
+		S4 = 1;
+		#150
+		S3 = 0;
+		S4 = 0;
+		#50
+		#S6 = 1;
+		#80
+		S6 = 0;
         
 		// Add stimulus here
 

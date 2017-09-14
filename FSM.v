@@ -33,7 +33,7 @@ module Counter(present_state,y,clk,en);
 	end
 	
 	always @(posedge clk) begin
-		#2
+		
 		if(y == 1) begin
 		
 			case (present_state)

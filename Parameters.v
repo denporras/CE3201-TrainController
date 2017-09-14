@@ -26,11 +26,16 @@ module Parameters(present_state,t,clk);
 	
 	reg [18:0] t;
 	
-	always @(posedge clk) begin
+	always @(posedge clk or present_state) begin
 		case (present_state)
-			4'b0000: t=19'b0000000011111010000; //2000ms
-			4'b0011: t=19'b0000000001111101000; //1000ms
-			4'b0100: t=19'b0000000011111010000; //2000ms
+			//4'b0011: t=19'b0000000011111010000; //2000ms
+			//4'b0100: t=19'b0000000001111101000; //1000ms
+			//4'b0101: t=19'b0000000011111010000; //2000ms
+			//quitar
+			4'b0011: t=19'b0000000000000000011; //1000ms
+			4'b0100: t=19'b0000000000000000100; //2000ms
+			4'b0101: t=19'b0000000000000000101; //2000ms
+			//quitar
 			default: t=19'b0000000000000000000;
 		endcase
 	end

@@ -41,8 +41,9 @@ module Syncronizer(
 	reg NotS1S2S3S4;
 	reg NotS3S4S5S6;
 	
-	always @(posedge Enable )
-	#1
+	
+	always @(posedge Enable or Selector or TIMER)
+	
 		begin 
 		S1oS6 = S1 | S6;
 		S2oS5 = S2 | S5;

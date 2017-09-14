@@ -38,11 +38,11 @@ Counter counter(.present_state(present_state),.y(y),.clk(clk),.en(en));
 //EN = UNA SALIDA
 TimeMeasurement time_mesurement(.clk(clk),.en(en),.res(time_in));
 
-Predictor predictor(.time_in(time_in),.time_out(t1));
+Predictor predictor(.time_in(time_in),.time_out(t1),.clk(clk));
 
 Parameters parameters(.present_state(present_state),.t(t0),.clk(clk),.present_state(present_state));
 
-Selector selector(.t1(t1),.t0(t0),.tout(tout),.clk(clk));
+Selector selector(.t1(t1),.t0(t0),.tout(tout),.clk(clk),.present_state(present_state));
 
 Timer temporizador(.t(tout),.clk(clk),.timer(timer),.present_state(present_state));
 

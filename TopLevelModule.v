@@ -18,14 +18,15 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module TopLevelModule(S1,S2,S3,S4,S5,S6);
+module TopLevelModule(S1,S2,S3,S4,S5,S6, an, seg7);
 
-input  S1,S2,S3,S4,S5,S6;
+input  S1,S2,S3,S4,S5,S6,an,seg7;
 wire next_state, enable, y, clk;
-wire [3:0] ld, en, present_state;
+wire [3:0] ld, en, present_state, an;
 wire [14:0] time_in;
 wire [18:0] t1;
 wire [12:0] t0;
+wire [6:0] seg7;
 
 //Revisar los enable
 //no hay temporizador
@@ -38,6 +39,9 @@ Predictor predictor(.time_in(time_in),.time_out(t1));
 Selector selector(.t1(t1),.t0(t0),.tout(),.clk(clk));
 Syncronizer(.S1(S1),.S2(S2),.S3(S3),.S4(S4),.S5(S5),.S6(S6),.Selector(next_state),.Enable(enable),.Y(y));
 //Arreglar res
-TimeMeasurement(.clk(clk),.en(),.res(t1));
+TimeMeasurement time_mesurement(.clk(clk),.en(),.res(time_in));
+//Que putas hace timer y con que se conecta
+Timer timer(.t(),.clk(clk),.timer());
+DisplayState(.Present_State(present_state),.an(an),.seg7(seg7));
 
 endmodule

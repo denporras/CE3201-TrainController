@@ -22,16 +22,16 @@ module Parameters(present_state,t,clk);
 
 	input [3:0] present_state;
 	input clk;
-	output [12:0] t; //Time in ms
+	output [18:0] t; //Time in ms
 	
-	reg [12:0] t;
+	reg [18:0] t;
 	
 	always @(posedge clk) begin
 		case (present_state)
-			4'b0000: t=13'b0011111010000; //2000ms
-			4'b0011: t=13'b0001111101000; //1000ms
-			4'b0100: t=13'b0011111010000; //2000ms
-			default: t=13'b0000000000000;
+			4'b0000: t=19'b0000000011111010000; //2000ms
+			4'b0011: t=19'b0000000001111101000; //1000ms
+			4'b0100: t=19'b0000000011111010000; //2000ms
+			default: t=19'b0000000000000000000;
 		endcase
 	end
 

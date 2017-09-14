@@ -20,9 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 module TimeMeasurement(clk,en,res);
 	input  clk, en;
-	output [12:0] res; //Time in ms
+	output [18:0] res; //Time in ms
 	 
-	reg [12:0] res, count; //Time in ms
+	reg [18:0] res, count; //Time in ms
 	 
 	initial begin
 		res = 0;

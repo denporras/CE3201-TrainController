@@ -30,7 +30,8 @@ module Syncronizer(
     input S6,
     input [4:0] Selector,
     input Enable,
-    output Y
+    output Y,
+	 input TIMER
     );
 	
 	reg Y;
@@ -49,10 +50,10 @@ module Syncronizer(
 		case (Selector)
 			0 : Y = S1oS6;
 			1 : Y <= S2oS5;
-			2 : Y <= 1;
-			3 : Y <= 1;
-			4 : Y <= 1;
-			5 : Y <= 1;
+			2 : Y <= TIMER;
+			3 : Y <= TIMER;
+			4 : Y <= TIMER;
+			5 : Y <= TIMER;
 			6 : Y <= S3;
 			7 : Y <= S4;
 			8 : Y <= S4;

@@ -18,18 +18,27 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Timer(t,clk,timer);
+module Timer(t,clk,timer,present_state);
 
-	input [12:0] t;
+	input [18:0] t;
 	input clk;
+	input [3:0] present_state;
 	output timer;
+	reg [18:0] t1;
+	
+	
+	reg timer;
 	
 	always @(posedge clk) begin
-		if(t>0) begin
+		if(t1>0) begin
 			timer = 0;
-			t = t-1;
+			t1 = t1-1;
 		end
 		else timer = 1;
+	end
+	
+	always @(present_state) begin
+			t1 = t;
 	end
 	
 endmodule

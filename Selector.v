@@ -18,10 +18,11 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Selector(t1,t0,tout,clk);
+module Selector(t1,t0,tout,clk,present_state);
 	input clk;
-	input [12:0] t1,t0;
-	output [12:0] tout;
+	input [18:0] t1,t0;
+	input [3:0] present_state;
+	output [18:0] tout;
 	
 	reg [12:0] tout;
 	

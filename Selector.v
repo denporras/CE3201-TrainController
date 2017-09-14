@@ -24,9 +24,9 @@ module Selector(t1,t0,tout,clk,present_state);
 	input [3:0] present_state;
 	output [18:0] tout;
 	
-	reg [12:0] tout;
+	reg [18:0] tout;
 	
-	always @(posedge clk) begin
+	always @(t1 or t0) begin
 		case (present_state)
 			4'b0000: tout=t0; 
 			4'b0011: tout=t0; 

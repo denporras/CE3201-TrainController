@@ -28,7 +28,7 @@ module Syncronizer(
     input S4,
     input S5,
     input S6,
-    input [4:0] Selector,
+    input [3:0] Selector,
     input Enable,
     output Y,
 	 input TIMER
@@ -41,7 +41,8 @@ module Syncronizer(
 	reg NotS1S2S3S4;
 	reg NotS3S4S5S6;
 	
-	always @(Enable)
+	always @(posedge Enable )
+	#1
 		begin 
 		S1oS6 = S1 | S6;
 		S2oS5 = S2 | S5;

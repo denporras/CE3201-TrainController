@@ -37,8 +37,11 @@ module Timer(t,clk,timer,present_state);
 		else timer = 1;
 	end
 	
-	always @(present_state) begin
+	always @(t) begin
 			t1 = t;
+			if(t1>0) begin
+				timer = 0;
+			end
 	end
 	
 endmodule

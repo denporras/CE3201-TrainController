@@ -18,12 +18,12 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module TopLevelModule(S1,S2,S3,S4,S5,S6, an, seg7);
+module TopLevelModule(S1,S2,S3,S4,S5,S6, an, seg7,clk);
 
-input  S1,S2,S3,S4,S5,S6,an,seg7;
+input  S1,S2,S3,S4,S5,S6,an,seg7,clk;
 wire  enable, y, clk, timer,en;
 wire [3:0]  present_state, an;
-wire [14:0] time_in;
+wire [18:0] time_in;
 wire [18:0] t1;
 wire [18:0] t0;
 wire [18:0] tout;
@@ -31,7 +31,7 @@ wire [6:0] seg7;
 
 
 
-Syncronizer(.S1(S1),.S2(S2),.S3(S3),.S4(S4),.S5(S5),.S6(S6),.Selector(next_state),.Enable(enable),.Y(y),.TIMER(timer));
+Syncronizer	sync(.S1(S1),.S2(S2),.S3(S3),.S4(S4),.S5(S5),.S6(S6),.Selector(present_state),.Enable(clk),.Y(y),.TIMER(timer));
 
 Counter counter(.present_state(present_state),.y(y),.clk(clk),.en(en));
 
@@ -44,10 +44,10 @@ Parameters parameters(.present_state(present_state),.t(t0),.clk(clk),.present_st
 
 Selector selector(.t1(t1),.t0(t0),.tout(tout),.clk(clk));
 
-Timer timer(.t(tout),.clk(clk),.timer(timer),.present_state(present_state));
+Timer temporizador(.t(tout),.clk(clk),.timer(timer),.present_state(present_state));
 
 //SALIDAS
 
-DisplayState(.Present_State(present_state),.an(an),.seg7(seg7));
+DisplayState disp(.Present_State(present_state),.an(an),.seg7(seg7));
 
 endmodule

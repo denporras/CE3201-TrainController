@@ -30,21 +30,4 @@ Selector selector(t1,t0,tout,clk);
 Syncronizer(.S1(S1),.S2(S2),.S3(S3),.S4(S4),.S5(S5),.S6(S6),.Selector(next_state),.Enable(enable),.Y(y));
 
 
-always @ (bcd) begin
- an = 4'b0111;
- case (bcd)
-  0 : seg7 = 7'b1000000;
-  1 : seg7 = 7'b1111001;
-  2 : seg7 = 7'b0100100;
-  3 : seg7 = 7'b0110000;
-  4 : seg7 = 7'b0011001;
-  5 : seg7 = 7'b0010010;
-  6 : seg7 = 7'b0000010;
-  7 : seg7 = 7'b1111000;
-  8 : seg7 = 7'b0000000;
-  9 : seg7 = 7'b0010000;
-  default : seg7 = 7'b0101010;
- endcase
-end
-
 endmodule

@@ -44,7 +44,7 @@ module Counter(next_state,ld,en,clk,present_state);
 endmodule
 
 module Counter_comb(next_state,ld,en,a,b,c,d,y);
-	input  a,b,c,d;
+	input  a,b,c,d, y;
 	output [3:0] next_state, ld, en;
 	
 	reg [3:0] next_state;

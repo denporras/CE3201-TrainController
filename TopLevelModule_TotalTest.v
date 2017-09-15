@@ -76,7 +76,7 @@ module TopLevelModule_TotalTest;
 		S3 = 0;
 		S4 = 0;
 		#50
-		#S6 = 1;
+		S6 = 1;
 		#80
 		S6 = 0;
         

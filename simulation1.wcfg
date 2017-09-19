@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/kevin/programacion/verilog/taller1/CE3201-TrainController/TopLevelModule_TotalTest_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="TopLevelModule_TotalTest" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="20" />
+   <wvobject fp_name="/TopLevelModule_TotalTest/S1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">S1</obj_property>
+      <obj_property name="ObjectShortName">S1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/S2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">S2</obj_property>
+      <obj_property name="ObjectShortName">S2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/S3" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">S3</obj_property>
+      <obj_property name="ObjectShortName">S3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/S4" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">S4</obj_property>
+      <obj_property name="ObjectShortName">S4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/S5" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">S5</obj_property>
+      <obj_property name="ObjectShortName">S5</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/S6" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">S6</obj_property>
+      <obj_property name="ObjectShortName">S6</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/an" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">an[3:0]</obj_property>
+      <obj_property name="ObjectShortName">an[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/seg7" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">seg7[6:0]</obj_property>
+      <obj_property name="ObjectShortName">seg7[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/uut/sync/Y" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Y</obj_property>
+      <obj_property name="ObjectShortName">Y</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/uut/counter/present_state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">present_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">present_state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/uut/time_mesurement/en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/uut/time_mesurement/res" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">res[18:0]</obj_property>
+      <obj_property name="ObjectShortName">res[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/uut/temporizador/t" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">t[18:0]</obj_property>
+      <obj_property name="ObjectShortName">t[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/uut/temporizador/timer" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">timer</obj_property>
+      <obj_property name="ObjectShortName">timer</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/uut/parameters/t" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">t[18:0]</obj_property>
+      <obj_property name="ObjectShortName">t[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/uut/selector/tout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tout[18:0]</obj_property>
+      <obj_property name="ObjectShortName">tout[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/uut/predictor/time_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">time_in[18:0]</obj_property>
+      <obj_property name="ObjectShortName">time_in[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/uut/predictor/time_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">time_out[18:0]</obj_property>
+      <obj_property name="ObjectShortName">time_out[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TopLevelModule_TotalTest/uut/selector/present_state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">present_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">present_state[3:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -33,8 +33,8 @@ module Timer(t,clk,timer,present_state);
 		t1 = 0;
 	end
 	
-	always @(posedge clk) begin
-	
+	always @(clk or t) begin
+	if(clk == 1) begin
 		if(t != taux) begin
 			t1 = t;
 			if(t1>0) begin
@@ -48,6 +48,8 @@ module Timer(t,clk,timer,present_state);
 			t1 = t1-1;
 		end
 		else timer = 1;
+		
+		end
 	end
 	
 	//always @(t) begin

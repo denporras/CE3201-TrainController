@@ -23,12 +23,12 @@ module TopLevelModule(S1,S2,S3,S4,S5,S6, an, seg7, clk_100mhz);
 input  S1,S2,S3,S4,S5,S6,clk_100mhz;
 wire  enable, y, clk, timer,en,a,r,v,vint,b1,b2,al,clk_100mhz;
 wire [3:0]  present_state; 
-output reg [3:0] an;
+output wire [3:0] an;
 wire [18:0] time_in;
 wire [18:0] t1;
 wire [18:0] t0;
 wire [18:0] tout;
-output reg [6:0] seg7;
+output wire [6:0] seg7;
 
 FrecuencyDivider fd(.clk_100mhz(clk_100mhz),.clk(clk));
 
@@ -41,7 +41,7 @@ TimeMeasurement time_mesurement(.clk(clk),.en(en),.res(time_in));
 
 Predictor predictor(.time_in(time_in),.time_out(t1),.clk(clk));
 
-Parameters parameters(.present_state(present_state),.t(t0),.clk(clk),.present_state(present_state));
+Parameters parameters(.present_state(present_state),.t(t0),.clk(clk));
 
 Selector selector(.t1(t1),.t0(t0),.tout(tout),.clk(clk),.present_state(present_state));
 

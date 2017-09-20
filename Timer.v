@@ -24,12 +24,25 @@ module Timer(t,clk,timer,present_state);
 	input clk;
 	input [3:0] present_state;
 	output timer;
-	reg [18:0] t1;
-	
-	
+	reg [18:0] t1,taux;
+
 	reg timer;
 	
+	initial begin
+		taux = 0;
+		t1 = 0;
+	end
+	
 	always @(posedge clk) begin
+	
+		if(t != taux) begin
+			t1 = t;
+			if(t1>0) begin
+				timer = 0;
+			end
+			taux = t;
+		end
+		
 		if(t1>0) begin
 			timer = 0;
 			t1 = t1-1;
@@ -37,11 +50,11 @@ module Timer(t,clk,timer,present_state);
 		else timer = 1;
 	end
 	
-	always @(t) begin
-			t1 = t;
-			if(t1>0) begin
-				timer = 0;
-			end
-	end
+	//always @(t) begin
+		//	t1 = t;
+			//if(t1>0) begin
+				//timer = 0;
+			//end
+	//end
 	
 endmodule

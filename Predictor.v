@@ -24,10 +24,10 @@ module Predictor(time_in, time_out,clk);
 input [18:0] time_in;
 input clk;
 output reg [18:0] time_out;
-reg speed;
-always @(posedge clk)
+reg [18:0] speed;
+always @(time_in)
 begin
-	speed = `dis_s1_s2/time_in*1000;
+	speed = 41*1000/time_in;
 	time_out = (`dis_s2/speed-30)*1000;
 	$display("someReg---->%f",time_out);
 	time_out =2487;

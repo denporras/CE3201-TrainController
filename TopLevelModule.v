@@ -18,10 +18,10 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module TopLevelModule(S1,S2,S3,S4,S5,S6, an, seg7, clk_100mhz);
+module TopLevelModule(S1,S2,S3,S4,S5,S6, an, seg7, clk_100mhz,a,r,v,vint,b1,b2,al);
 
 input  S1,S2,S3,S4,S5,S6,clk_100mhz;
-wire  enable, y, clk, timer,en,a,r,v,vint,b1,b2,al,clk_100mhz;
+wire  enable, y, clk, timer,en,clk_100mhz;
 wire [3:0]  present_state; 
 output wire [3:0] an;
 wire [18:0] time_in;
@@ -29,6 +29,7 @@ wire [18:0] t1;
 wire [18:0] t0;
 wire [18:0] tout;
 output wire [6:0] seg7;
+output wire a,r,v,vint,b1,b2,al;
 
 FrecuencyDivider fd(.clk_100mhz(clk_100mhz),.clk(clk));
 

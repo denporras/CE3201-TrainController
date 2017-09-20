@@ -30,8 +30,6 @@ begin
 	speed = 41*1000/time_in;
 	time_out = (`dis_s2/speed-30)*1000;
 	$display("someReg---->%f",time_out);
-	time_out =2487;
-	//time_out = 3;
 end
 
 endmodule

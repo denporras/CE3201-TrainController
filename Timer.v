@@ -18,10 +18,10 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Timer(t,clk,timer,present_state);
+module Timer(t,clk,timer,present_state,en);
 
 	input [18:0] t;
-	input clk;
+	input clk,en;
 	input [3:0] present_state;
 	output timer;
 	reg [18:0] t1,taux;
@@ -33,9 +33,9 @@ module Timer(t,clk,timer,present_state);
 		t1 = 0;
 	end
 	
-	always @(clk or t) begin
-	if(clk == 1) begin
-		if(t != taux) begin
+	always @(negedge clk) begin
+	//if(clk == 1) begin
+		if(t !== taux) begin
 			t1 = t;
 			if(t1>0) begin
 				timer = 0;
@@ -49,7 +49,7 @@ module Timer(t,clk,timer,present_state);
 		end
 		else timer = 1;
 		
-		end
+		//end
 	end
 	
 	//always @(t) begin
@@ -58,5 +58,7 @@ module Timer(t,clk,timer,present_state);
 				//timer = 0;
 			//end
 	//end
+	
+	
 	
 endmodule

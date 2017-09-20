@@ -43,7 +43,7 @@ module Syncronizer(
 	
 	
 	always @(Enable or Selector or TIMER)
-		if(Enable == 1) begin
+		//if(Enable == 1) begin
 		begin 
 		S1oS6 = S1 | S6;
 		S2oS5 = S2 | S5;
@@ -68,6 +68,6 @@ module Syncronizer(
 			15 : Y = S1;
 		  default : Y = 0;
 		endcase
-		end
+		//end
 	end
 endmodule

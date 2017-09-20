@@ -33,7 +33,7 @@ module TopLevelModule_TotalTest;
 	reg S6;
 	reg [3:0] an;
 	reg [6:0] seg7;
-	reg clk;
+	reg clk_100mhz;
 
 	// Instantiate the Unit Under Test (UUT)
 	TopLevelModule uut (
@@ -45,7 +45,7 @@ module TopLevelModule_TotalTest;
 		.S6(S6), 
 		.an(an), 
 		.seg7(seg7), 
-		.clk(clk)
+		.clk_100mhz(clk_100mhz)
 	);
 
 	initial begin
@@ -58,26 +58,26 @@ module TopLevelModule_TotalTest;
 		S6 = 0;
 		an = 0;
 		seg7 = 0;
-		clk = 0;
+		clk_100mhz = 0;
 
 		// Wait 100 ns for global reset to finish
-		#100;
+		#100000000;
 		S1 = 1;
-		#200
+		#200000000
 		S2 = 1;
-		#100
+		#100000000
 		S1 = 0;
 		S2 = 0;
-		#100
+		#100000000
 		S3 = 1;
-		#100
+		#100000000
 		S4 = 1;
-		#150
+		#150000000
 		S3 = 0;
 		S4 = 0;
-		#50
+		#50000000
 		S6 = 1;
-		#80
+		#80000000
 		S6 = 0;
         
 		// Add stimulus here
@@ -85,7 +85,7 @@ module TopLevelModule_TotalTest;
 	end
 	
 	always begin
-	#5 clk = !clk;
+	#10 clk_100mhz = !clk_100mhz;
 	end
       
 endmodule

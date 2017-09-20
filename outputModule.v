@@ -59,6 +59,12 @@ always @(present_state or y) begin
 					a = 1;
 					al = 0; //Active alarm
 				end
+				4'b0101:
+				begin
+					r = 1;
+					a = 0;
+				end			
+
 				4'b0110:
 				begin
 					b1 = 1;
